@@ -1,8 +1,8 @@
 (function() {
 
-var exports = this, IceCommentsPlugin;
+var exports = this, IceDiscussionsPlugin;
 	
-IceCommentsPlugin = function(ice_instance) {
+IceDiscussionsPlugin = function(ice_instance) {
 	this._ice = ice_instance;
 	
 	this.commentAdded = function() {};
@@ -14,7 +14,7 @@ IceCommentsPlugin = function(ice_instance) {
 	ice.InlineChangeEditor.prototype.resolveComment = this._bind(this.resolveComment);
 };
 
-IceCommentsPlugin.prototype = {
+IceDiscussionsPlugin.prototype = {
 	setSettings: function(settings) {
 		settings = settings || {};
 		ice.dom.extend(this, settings);
@@ -30,6 +30,7 @@ IceCommentsPlugin.prototype = {
 		if (!this._validRange(range)) return false;
 		
 		var changeid = this._ice.startBatchChange();
+		console.log(changeid);
 		
 		//stuff the contents of the selection into a comment node
 		var node = this._ice.createIceNode('commentType', node);
@@ -65,12 +66,16 @@ IceCommentsPlugin.prototype = {
 		});
 	},
 	
-	selectionChanged: function() {
+	caretUpdated: function() {
 		var range = this._ice.getCurrentRange();
 		var ctNode = this._ice.getIceNode(range.startContainer, 'commentType');
 		var id = ctNode ? ctNode.getAttribute(this._ice.changeIdAttribute) : -1;
 		
 		this.commentSelected(Number(id));
+	},
+	
+	selectionChanged: function() {
+		this.caretUpdated();
 	},
 	
 	//for simplicity, comment ranges cannot contain block-level elements
@@ -95,7 +100,7 @@ IceCommentsPlugin.prototype = {
 	}
 };
 
-ice.dom.noInclusionInherits(IceCommentsPlugin, ice.IcePlugin);
-exports._plugin.IceCommentsPlugin = IceCommentsPlugin;
+ice.dom.noInclusionInherits(IceDiscussionsPlugin, ice.IcePlugin);
+exports._plugin.IceDiscussionsPlugin = IceDiscussionsPlugin;
 
 }).call(this.ice);

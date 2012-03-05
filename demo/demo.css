@@ -88,7 +88,7 @@ a.mceButton16 img.mceIcon { width: 16px; height: 16px; padding: 2px;}
 		color: #1080B0;
 }
 .com {
-	background-color: #ffffa6;
+	background: rgba(255, 255, 000, .3);
 	color: #000;
 }
 .ice-avoid {
@@ -104,4 +104,3 @@ a.mceButton16 img.mceIcon { width: 16px; height: 16px; padding: 2px;}
 	width: 150px;
 	z-index: 100;
 }
-
