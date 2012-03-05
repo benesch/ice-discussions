@@ -1,0 +1,107 @@
+body {
+	font-size: 16px;
+	line-height: 24px;
+	background: #EFEFEF;
+	height: 100%;
+	color: #6F6F6F;
+	font-family: Helvetica Neue,Helvetica,Arial;
+}
+div.container {
+	width: 720px;
+	margin: 0 auto;
+}
+.editor {
+	box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px 0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px 0;
+	margin-bottom: 30px;
+	padding: 10px;
+	width: 700px;
+}
+h1, h3 {
+	color: #7F7F7F;
+	text-shadow: 0 1px 0 white;
+}
+.control { font: 12px Arial; padding: 5px; display: inline-block; margin-bottom: 5px; }
+.control button { margin-right: 5px; }
+#content { color: #333333; font: 14px; }
+#tinymce-wrapper { height: 300px; }
+#text-wrapper { 
+	width: 620px;
+	background: #CFCFCF;
+	overflow: auto; 
+	padding: 40px;
+	border: 1px solid #BFBFBF;
+	font-size: 15px;
+	line-height: 24px;
+}
+#textbody { 
+	margin: 0 auto;
+	border: solid 2px #BFBFBF;
+	background: white;
+	padding: 15px 30px 30px;
+	outline: none;
+}
+a.mceButton16 img.mceIcon { width: 16px; height: 16px; padding: 2px;}
+
+.CT-hide .del, .CT-hide .del {
+	display: none;
+}
+
+.CT-hide .ins, .CT-hide .ins {
+	color: #333333;
+	background: none !important;
+	border: none !important; 
+	text-decoration: none;
+}
+
+.del {
+	text-decoration: line-through;
+}
+.ins {
+	text-decoration: underline;
+}
+.cts-1 {
+    color: green;
+}
+.cts-2 {
+    color: #C02000;
+}
+
+.cts-3 {
+    color: #004090;
+}
+
+.cts-4 {
+    color: #F06000;
+}
+
+.cts-5 {
+    color: purple;
+}
+
+.cts-6 {
+    color: #801080;
+}
+
+.cts-7 {
+		color: #1080B0;
+}
+.com {
+	background-color: #ffffa6;
+	color: #000;
+}
+.ice-avoid {
+	color: red;
+}
+
+#comment {
+	background: #ffffa6;
+	padding: 10px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 150px;
+	z-index: 100;
+}
+
