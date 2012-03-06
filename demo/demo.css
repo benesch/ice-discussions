@@ -87,7 +87,7 @@ a.mceButton16 img.mceIcon { width: 16px; height: 16px; padding: 2px;}
 .cts-7 {
 		color: #1080B0;
 }
-.com {
+.dis {
 	background: rgba(255, 255, 000, .3);
 	color: #000;
 }
@@ -95,7 +95,7 @@ a.mceButton16 img.mceIcon { width: 16px; height: 16px; padding: 2px;}
 	color: red;
 }
 
-#comment {
+#discussion {
 	background: #ffffa6;
 	padding: 10px;
 	position: fixed;
