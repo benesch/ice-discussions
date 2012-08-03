@@ -1,3 +1,3 @@
 [submodule "ice"]
 	path = ice
-	url = https://github.com/NYTimes/ice.git
+	url = git@github.com:primatology/ice.git
