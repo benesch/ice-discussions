@@ -1,5 +1,5 @@
 (function() {
-
+	
 var exports = this, IceDiscussionsPlugin;
 	
 IceDiscussionsPlugin = function(ice_instance) {
@@ -30,7 +30,6 @@ IceDiscussionsPlugin.prototype = {
 		if (!this._validRange(range)) return false;
 		
 		var changeid = this._ice.startBatchChange();
-		console.log(changeid);
 		
 		//stuff the contents of the selection into a discussion node
 		var node = this._ice.createIceNode('discussionType', node);
